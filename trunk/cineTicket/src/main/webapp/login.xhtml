@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+
+    <h:head>
+        <title>Identification</title>
+    </h:head>
+    <h:body>
+        <h:form id="form1">
+            <p:growl id="growl" showDetail="true" life="3000" />  
+
+            <!-- LOGIN PART -->
+            <h:panelGrid columns="2" cellpadding="5">  
+                <h:outputLabel for="username" value="Username:" />  
+                <p:inputText value="#{login.username}"   
+                             id="username" required="true" label="username" />  
+
+                <h:outputLabel for="password" value="Password:" />  
+                <h:inputSecret value="#{login.password}"   
+                               id="password" required="true" label="password" />  
+
+
+            </h:panelGrid>  
+           
+            <h:commandButton id="loginButton" value="Login"  
+                             action="#{login.loginAction}"/>  
+
+            <h:outputText value="Pas d'identifiant ? "/>
+            <h:outputLink id="loginLink" value="javascript:void(0)" onclick="dlg.show()" title="s'inscrire">     
+                <h:outputText value="S'inscrire" />  
+            </h:outputLink> 
+
+            <!--REGISTRATION PART-->
+            <p:dialog id="dialog" header="Login" widgetVar="dlg">  
+                <h:form>  
+
+                    <h:panelGrid columns="2" cellpadding="5">  
+                        <h:outputLabel for="lastName" value="Nom: " />  
+                        <p:inputText value="#{login.lastName}"   
+                                     id="name" required="true" label="Nom" />  
+
+                        <h:outputLabel for="firstName" value="Prenom: " />  
+                        <h:inputSecret value="#{login.firstName}"   
+                                       id="firstName" required="true" label="Prenom" />  
+                        
+                        <h:outputLabel for="email" value="Email: " />  
+                        <h:inputSecret value="#{login.email}"   
+                                       id="eamail" required="true" label="Email" />
+                        3
+                        <h:outputLabel for="address" value="Addresse: " />  
+                        <h:inputSecret value="#{login.address}"   
+                                       id="address" required="true" label="Address" />
+                        
+                        <h:outputLabel for="town" value="Ville: " />  
+                        <h:inputSecret value="#{login.town}"   
+                                       id="town" required="true" label="Ville" />
+                        
+                        <h:outputLabel for="cp" value="Code postale: " />  
+                        <h:inputSecret value="#{login.cp}"   
+                                       id="cp" required="true" label="Code postale" />
+                        
+                        <f:facet name="footer">  
+                            <p:commandButton id="registrationButton" value="S'inscrire" update=":growl"   
+                                             actionListener="#{login.registrationAction}"   
+                                             oncomplete="handleLoginRequest(xhr, status, args)"/>  
+                        </f:facet>  
+                    </h:panelGrid>  
+
+                </h:form>  
+            </p:dialog> 
+
+            <script type="text/javascript">  
+                function handleLoginRequest(xhr, status, args) {  
+                    if(args.validationFailed || !args.loggedIn) {  
+                        jQuery('#dialog').effect("shake", { times:3 }, 100);  
+                    } else {  
+                        dlg.hide();  
+                        jQuery('#loginLink').fadeOut();  
+                    }  
+                }  
+            </script>  
+
+        </h:form>
+
+
+    </h:body>
+</html>
+
