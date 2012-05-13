@@ -7,5 +7,21 @@
     <property name="hibernate.connection.url">jdbc:mysql://instance13156.db.xeround.com:8892/billeterie</property>
     <property name="hibernate.connection.username">fredlin</property>
     <property name="hibernate.connection.password">fredolinda</property>
+    <mapping class="com.epita.dao.User"/>
+    <mapping class="com.epita.dao.Film"/>
+    <mapping class="com.epita.dao.CommamdeEtat"/>
+    <mapping class="com.epita.dao.Caddie"/>
+    <mapping class="com.epita.dao.ReservationId"/>
+    <mapping class="com.epita.dao.Commande"/>
+    <mapping class="com.epita.dao.Seances"/>
+    <mapping class="com.epita.dao.Reservation"/>
+    <mapping class="com.epita.bean.Reservation"/>
+    <mapping class="com.epita.bean.Commande"/>
+    <mapping class="com.epita.bean.User"/>
+    <mapping class="com.epita.bean.CommamdeEtat"/>
+    <mapping class="com.epita.bean.ReservationId"/>
+    <mapping class="com.epita.bean.Caddie"/>
+    <mapping class="com.epita.bean.Film"/>
+    <mapping class="com.epita.bean.Seances"/>
   </session-factory>
 </hibernate-configuration>
