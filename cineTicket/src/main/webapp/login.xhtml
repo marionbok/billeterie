@@ -16,7 +16,7 @@
             <!-- LOGIN PART -->
             <h:panelGrid columns="2" cellpadding="5">  
                 <h:outputLabel for="username" value="Username:" />  
-                <p:inputText value="#{login.username}"   
+                <h:inputText value="#{login.username}"   
                              id="username" required="true" label="username" />  
 
                 <h:outputLabel for="password" value="Password:" />  
@@ -50,7 +50,7 @@
                         <h:outputLabel for="email" value="Email: " />  
                         <h:inputSecret value="#{login.email}"   
                                        id="eamail" required="true" label="Email" />
-                        3
+                        
                         <h:outputLabel for="address" value="Addresse: " />  
                         <h:inputSecret value="#{login.address}"   
                                        id="address" required="true" label="Address" />
