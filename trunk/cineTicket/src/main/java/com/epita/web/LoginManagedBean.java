@@ -4,6 +4,7 @@
  */
 package com.epita.web;
 
+import com.epita.dao.UserDao;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.event.ActionEvent;
@@ -25,6 +26,15 @@ public class LoginManagedBean {
     private String email;
     private String cp;
     private String address;
+    private UserDao userDao;
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     public String getAddress() {
         return address;

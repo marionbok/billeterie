@@ -72,6 +72,11 @@
             <version>2.2.1</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>10.8.1.2</version>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>6.0</version>
@@ -129,12 +134,12 @@
         </plugins>
     </build>
     <repositories>
-        <repository>
+       <!-- <repository>
             <url>http://repo1.maven.org/maven2/</url>
             <id>hibernate-support</id>
             <layout>default</layout>
             <name>Repository for library Library[hibernate-support]</name>
-        </repository>
+        </repository>-->
         <repository>
             <id>unknown-jars-temp-repo</id>
             <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
@@ -145,6 +150,12 @@
             <id>primefaces</id>
             <layout>default</layout>
             <name>Repository for library Library[primefaces]</name>
+        </repository>
+        <repository>
+            <url>http://download.java.net/maven/2/</url>
+            <id>hibernate-support</id>
+            <layout>default</layout>
+            <name>Repository for library Library[hibernate-support]</name>
         </repository>
     </repositories>
 </project>

@@ -10,8 +10,8 @@
         <title>Identification</title>
     </h:head>
     <h:body>
-        <h:form id="form1">
-            <p:growl id="growl" showDetail="true" life="3000" />  
+        <h:form id="form1" >
+            <p:growl id="growl" showDetail="true"/>  
 
             <!-- LOGIN PART -->
             <h:panelGrid columns="2" cellpadding="5">  
@@ -37,7 +37,7 @@
             <!--REGISTRATION PART-->
             <p:dialog id="dialog" header="Login" widgetVar="dlg">  
                 <h:form>  
-
+                    
                     <h:panelGrid columns="2" cellpadding="5">  
                         <h:outputLabel for="lastName" value="Nom: " />  
                         <p:inputText value="#{login.lastName}"   
