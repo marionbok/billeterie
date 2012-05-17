@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
-  <schema-selection match-catalog="billeterie"/>
-  <table-filter match-name="commamde_etat"/>
-  <table-filter match-name="reservation"/>
-  <table-filter match-name="caddie"/>
-  <table-filter match-name="film"/>
-  <table-filter match-name="user"/>
-  <table-filter match-name="commande"/>
-  <table-filter match-name="seances"/>
+  <schema-selection match-catalog="Billeterie"/>
+  <table-filter match-name="RESERVATION"/>
+  <table-filter match-name="SEANCES"/>
+  <table-filter match-name="USER"/>
+  <table-filter match-name="COMMANDE"/>
+  <table-filter match-name="COMMAMDE_ETAT"/>
+  <table-filter match-name="FILM"/>
 </hibernate-reverse-engineering>
