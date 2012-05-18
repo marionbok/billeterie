@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+
+    <h:head>
+        <title>Identification</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </h:head>
+    <h:body style="background-color: whitesmoke">
+        <div align="center" color="white" width="100%" height="200px">
+            <h:form id="form1">
+                <p:growl id="growl" showDetail="true" life="3000" />  
+
+                <!-- LOGIN PART -->
+                <h:panelGrid columns="2" cellpadding="5">  
+                    <h:outputLabel for="name" value="Titre :" />  
+                    <h:inputText value="#{filmMB.film.titre}"   
+                                 id="name" required="true" label="titre" />  
+
+                    <h:outputLabel for="resume" value="Resume :" />  
+                    <h:inputTextarea value="#{filmMB.film.resume}"   
+                                     id="resume" required="true" label="resume" />  
+
+                </h:panelGrid>  
+
+                <h:commandButton id="loginButton" value="Login"  
+                                 action="#{filmMB.saveFilm}"/>  
+
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

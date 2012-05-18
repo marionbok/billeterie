@@ -15,7 +15,7 @@ import javax.faces.event.ActionEvent;
  */
 @ManagedBean (name="login")
 @ViewScoped
-public class LoginManagedBean {
+public class LoginManagedBean{
 
     // <editor-fold defaultstate="collapsed" desc="private properties">
     private String username;
@@ -108,6 +108,8 @@ public class LoginManagedBean {
     }
     
     public String loginAction(){
+        
+        
         
         return "login";
     }
